@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://final obj/map6.tscn" type="PackedScene" id=1]
+[ext_resource path="res://final obj/map5.tscn" type="PackedScene" id=2]
+[ext_resource path="res://final obj/map3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://final obj/map4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://final obj/map1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://final obj/map7.tscn" type="PackedScene" id=6]
+[ext_resource path="res://final obj/map2.tscn" type="PackedScene" id=7]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="map1" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5499, -35 )
+
+[node name="map2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2105, 5.55115, -23.1572 )
+
+[node name="map3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31678, 5.54803, -37.9128 )
+
+[node name="map4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93169, -15.4846 )
+
+[node name="map5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4481, 0, -39.9072 )
+
+[node name="map6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, -24 )
+
+[node name="map7" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7662, 0, -13.8409 )
+
+[node name="map8" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.286274, 1.93169, -22.1107 )
+
+[node name="map9" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.5112, 0, -41.8267 )

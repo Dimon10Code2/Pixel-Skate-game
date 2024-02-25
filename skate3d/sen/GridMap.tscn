@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sen/meh1.meshlib" type="MeshLibrary" id=1]
+
+[node name="GridMap" type="GridMap"]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 12, 12, 12 )
+collision_layer = 2
+collision_mask = 7
+data = {
+"cells": PoolIntArray( 0, 0, 5, 0, 65527, 5, 0, 65528, 5, 0, 65529, 5, 0, 65530, 5, 0, 65531, 5, 0, 65532, 5, 0, 65533, 5, 0, 65534, 5, 0, 65535, 5 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}

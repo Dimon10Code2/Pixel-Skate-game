@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://obj/palette_001.material" type="Material" id=1]
+[ext_resource path="res://obj/pl1 bl.obj" type="ArrayMesh" id=2]
+
+[node name="KinematicBody" type="KinematicBody"]
+collision_mask = 2
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.473842 )
+polygon = PoolVector2Array( -0.71012, 0.0893734, -0.697313, 2.99646, -0.915025, 3.00927, -0.915025, 3.30382, -0.722927, 3.30382, -0.697313, 4.50764, -0.889412, 4.49483, -1.38887, 4.61009, -2.87443, 4.49483, -0.915025, 4.87903, -0.274697, 5.09674, -0.479602, 5.30164, -0.594861, 6.01881, -0.402762, 6.1981, 0.391244, 6.18529, 0.583343, 5.9932, 0.493696, 5.27603, 0.288792, 5.09674, 0.903506, 4.90464, 3.00378, 4.81499, 2.69642, 4.61009, 0.916313, 4.61009, 0.711408, 4.48202, 0.698601, 3.32943, 0.903506, 3.30382, 0.903506, 3.02207, 0.698601, 2.99646, 0.685795, 0.06376, 0.301598, 0.0253403, 0.327211, 2.21526, 0.0966931, 2.6891, -0.0825987, 2.70191, -0.287504, 2.18965, -0.313117, 0.0253403 )
+
+[node name="pl1 bl" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.975757, 0.218859, 0, -0.218859, 0.975757, 0.15845, 10.658, 15.976 )

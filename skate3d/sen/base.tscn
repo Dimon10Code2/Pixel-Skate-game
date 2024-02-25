@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sen/map_group 1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://playre/play.tscn" type="PackedScene" id=2]
+[ext_resource path="res://final obj/skate 1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://skrip/game.gd" type="Script" id=5]
+
+[node name="base" type="Node"]
+
+[node name="game" type="Spatial" parent="."]
+script = ExtResource( 5 )
+
+[node name="skate_1" parent="game" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.85864, 10.8979, -181.892 )
+
+[node name="KinematicBody" parent="game/skate_1" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.25209, 0 )
+
+[node name="map_group_1" parent="game" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.411501, -1.90735e-06, 0.0186081 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="game"]
+transform = Transform( 0.00495549, 0.999346, -0.0358317, -0.136905, 0.0361728, 0.989923, 0.990572, 0, 0.136995, -109.427, 78.0942, -73.0354 )
+
+[node name="MarginContainer" type="MarginContainer" parent="game"]
+visible = false
+margin_right = 40.0
+margin_bottom = 68.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game/MarginContainer"]
+margin_right = 95.0
+margin_bottom = 68.0
+
+[node name="resume" type="Button" parent="game/MarginContainer/VBoxContainer"]
+pause_mode = 2
+margin_right = 12.0
+margin_bottom = 20.0
+text = "resume"
+
+[node name="quit to menu" type="Button" parent="game/MarginContainer/VBoxContainer"]
+pause_mode = 2
+margin_top = 24.0
+margin_right = 95.0
+margin_bottom = 44.0
+text = "quit to menu"
+
+[node name="pause" type="Button" parent="game"]
+pause_mode = 2
+margin_right = 95.0
+margin_bottom = 68.0
+text = "pause"
+
+[node name="move" type="Button" parent="game"]
+margin_left = 768.0
+margin_top = 448.0
+margin_right = 808.0
+margin_bottom = 468.0
+rect_scale = Vector2( 2, 2 )
+text = "move"
+
+[node name="stop" type="Button" parent="game"]
+margin_left = 664.0
+margin_top = 448.0
+margin_right = 704.0
+margin_bottom = 468.0
+rect_scale = Vector2( 2, 2 )
+text = "stop"
+
+[connection signal="pressed" from="game/MarginContainer/VBoxContainer/resume" to="game" method="_on_resume_pressed"]
+[connection signal="pressed" from="game/MarginContainer/VBoxContainer/quit to menu" to="game" method="_on_quit_to_menu_pressed"]
+[connection signal="pressed" from="game/pause" to="game" method="_on_pause_pressed"]
+[connection signal="pressed" from="game/move" to="game" method="_on_move_pressed"]
+[connection signal="pressed" from="game/stop" to="game" method="_on_stop_pressed"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://obj/palette_001.material" type="Material" id=1]
+[ext_resource path="res://obj/map7 bl.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 6.01332, 1, 1 )
+
+[node name="map7" type="Spatial"]
+
+[node name="map7 bl" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="map7 bl"]
+collision_layer = 2
+collision_mask = 7
+
+[node name="CollisionShape" type="CollisionShape" parent="map7 bl/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00788, 0 )
+shape = SubResource( 1 )
