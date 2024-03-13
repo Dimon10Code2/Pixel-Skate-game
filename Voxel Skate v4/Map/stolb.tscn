@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2lqlnwl7ywo1"]
+
+[ext_resource type="Material" path="res://obj/palette_001.material" id="1_bfq4a"]
+[ext_resource type="ArrayMesh" uid="uid://db3eopx5fwtjk" path="res://obj/stolb.obj" id="2_a75y1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_epaux"]
+size = Vector3(10.5253, 1.98093, 2)
+
+[node name="Stolb" type="MeshInstance3D"]
+material_override = ExtResource("1_bfq4a")
+mesh = ExtResource("2_a75y1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 3.35339e-08, 5.23283, 0)
+shape = SubResource("BoxShape3D_epaux")

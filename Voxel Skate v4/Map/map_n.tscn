@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx4uoqyclrnhv"]
+
+[ext_resource type="PackedScene" uid="uid://ns1b2q44tkds" path="res://Map/map_10.tscn" id="1_ru8c6"]
+[ext_resource type="PackedScene" uid="uid://bjxrr73ja265u" path="res://Map/map_9.tscn" id="2_xpfw4"]
+[ext_resource type="PackedScene" uid="uid://mi6vhp2gh7hh" path="res://Map/map_8.tscn" id="3_vp3pl"]
+[ext_resource type="PackedScene" uid="uid://23tptn5rd2dy" path="res://Map/stolb_1.tscn" id="4_bhn22"]
+[ext_resource type="PackedScene" uid="uid://8hcbbvhh1ugj" path="res://Map/rock.tscn" id="5_28apa"]
+
+[node name="Map_N" type="Node3D"]
+
+[node name="map 10" parent="." instance=ExtResource("1_ru8c6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0, 0)
+
+[node name="map 9" parent="." instance=ExtResource("2_xpfw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="map 8" parent="." instance=ExtResource("3_vp3pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="map 11" parent="." instance=ExtResource("3_vp3pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="map 12" parent="." instance=ExtResource("3_vp3pl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 0)
+
+[node name="map 13" parent="." instance=ExtResource("2_xpfw4")]
+
+[node name="map 14" parent="." instance=ExtResource("1_ru8c6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 2, 0)
+
+[node name="map 15" parent="." instance=ExtResource("1_ru8c6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 4, 0)
+
+[node name="stolb 1" parent="." instance=ExtResource("4_bhn22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 3, 0)
+
+[node name="stolb 2" parent="." instance=ExtResource("4_bhn22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 0)
+
+[node name="rock" parent="." instance=ExtResource("5_28apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 3, -5)
+
+[node name="rock2" parent="." instance=ExtResource("5_28apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, -5)
+
+[node name="rock3" parent="." instance=ExtResource("5_28apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3, -5)
+
+[node name="rock4" parent="." instance=ExtResource("5_28apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -5)
+
+[node name="rock5" parent="." instance=ExtResource("5_28apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 3, -5)

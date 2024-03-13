@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3s7rbaqcjfat"]
+
+[ext_resource type="Material" path="res://obj/palette_001.material" id="1_hp6jf"]
+[ext_resource type="ArrayMesh" uid="uid://dotpqc1lvjuxp" path="res://obj/enemy.obj" id="2_p5bir"]
+[ext_resource type="Script" path="res://Player/enemy.gd" id="3_kvq6j"]
+[ext_resource type="AudioStream" uid="uid://dmarawrq27uop" path="res://music/dog-whimpering.mp3" id="4_ns4jw"]
+[ext_resource type="AudioStream" uid="uid://twpcy200s2e5" path="res://music/1e8f5e7525653f9.mp3" id="5_1iit3"]
+
+[node name="enemy" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+material_override = ExtResource("1_hp6jf")
+mesh = ExtResource("2_p5bir")
+script = ExtResource("3_kvq6j")
+
+[node name="kill" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0635, 3.67019, -1.3391e-07)
+target_position = Vector3(-1, 0, 0)
+
+[node name="dead1" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, -0.7, 0)
+
+[node name="dead2" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5043, 4.92571, -1.09466e-07)
+target_position = Vector3(0, 1, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ns4jw")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1iit3")

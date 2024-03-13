@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fb2wyxi1jn51"]
+
+[ext_resource type="Material" path="res://obj/palette_001.material" id="1_5gpr8"]
+[ext_resource type="ArrayMesh" uid="uid://dop4u4nhp67ba" path="res://obj/pl2 bl.obj" id="2_4e5xm"]
+
+[node name="chapert2" type="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+material_override = ExtResource("1_5gpr8")
+mesh = ExtResource("2_4e5xm")

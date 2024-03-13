@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqrg2ts3x1ibt"]
+
+[ext_resource type="PackedScene" uid="uid://hihpilv5l22a" path="res://Map/map_4.tscn" id="1_rn4w1"]
+[ext_resource type="PackedScene" uid="uid://bhu7a5djjqa12" path="res://Map/map_2.tscn" id="2_n2ie3"]
+[ext_resource type="PackedScene" uid="uid://frsdy03hjqkr" path="res://Map/map_6.tscn" id="3_x8ma2"]
+[ext_resource type="PackedScene" uid="uid://b2lqlnwl7ywo1" path="res://Map/stolb.tscn" id="4_my7i5"]
+
+[node name="Map_E" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Map_4" parent="." instance=ExtResource("1_rn4w1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="Map_2" parent="." instance=ExtResource("2_n2ie3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="Map_3" parent="." instance=ExtResource("2_n2ie3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Map_5" parent="." instance=ExtResource("2_n2ie3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="Map_6" parent="." instance=ExtResource("2_n2ie3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+
+[node name="Map_7" parent="." instance=ExtResource("2_n2ie3")]
+
+[node name="Map_8" parent="." instance=ExtResource("1_rn4w1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
+
+[node name="Map_9" parent="." instance=ExtResource("1_rn4w1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 7)
+
+[node name="Map_10" parent="." instance=ExtResource("3_x8ma2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -7)
+
+[node name="Map_11" parent="." instance=ExtResource("3_x8ma2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -29)
+
+[node name="Stolb" parent="." instance=ExtResource("4_my7i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 4)
+
+[node name="Stolb3" parent="." instance=ExtResource("4_my7i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.30516e-07, 3, -19)

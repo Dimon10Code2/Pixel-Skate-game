@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca1u2hep647jf"]
+
+[ext_resource type="PackedScene" uid="uid://hihpilv5l22a" path="res://Map/map_4.tscn" id="1_wwi0m"]
+[ext_resource type="PackedScene" uid="uid://bhu7a5djjqa12" path="res://Map/map_2.tscn" id="2_jorxn"]
+[ext_resource type="PackedScene" uid="uid://frsdy03hjqkr" path="res://Map/map_6.tscn" id="3_cdwko"]
+[ext_resource type="PackedScene" uid="uid://b3s7rbaqcjfat" path="res://Player/enemy.tscn" id="4_jbnag"]
+
+[node name="Map_J" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Map_4" parent="." instance=ExtResource("1_wwi0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="Map_2" parent="." instance=ExtResource("2_jorxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="Map_3" parent="." instance=ExtResource("2_jorxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Map_5" parent="." instance=ExtResource("2_jorxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="Map_6" parent="." instance=ExtResource("2_jorxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+
+[node name="Map_7" parent="." instance=ExtResource("2_jorxn")]
+
+[node name="Map_8" parent="." instance=ExtResource("1_wwi0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
+
+[node name="Map_9" parent="." instance=ExtResource("1_wwi0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 7)
+
+[node name="Map_10" parent="." instance=ExtResource("3_cdwko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -7)
+
+[node name="Map_11" parent="." instance=ExtResource("3_cdwko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -29)
+
+[node name="enemy" parent="." instance=ExtResource("4_jbnag")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.17939e-07, 3, -21)
+
+[node name="enemy2" parent="." instance=ExtResource("4_jbnag")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 3, -5)
