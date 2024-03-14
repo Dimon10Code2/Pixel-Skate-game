@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Voxel_Skate 2.0"
+config/name="Voxel_Skate Lite"
 config/version="1.1"
 run/main_scene="res://UI/ui.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=2500
 
 SaveSystem="*res://addons/save_system/save_system.gd"
 Global="*res://Script/Global.gd"
+Money="*res://Map/money.tscn"
 
 [display]
 

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvkjt2duuwhyx"
+path="res://.godot/imported/money3.obj-abecc13cd728be489e3a916d2cda6beb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/money3.obj-abecc13cd728be489e3a916d2cda6beb.mesh"]
+
+source_file="res://obj/money3.obj"
+dest_files=["res://.godot/imported/money3.obj-abecc13cd728be489e3a916d2cda6beb.mesh", "res://.godot/imported/money3.obj-abecc13cd728be489e3a916d2cda6beb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

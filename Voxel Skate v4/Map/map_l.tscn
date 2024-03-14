@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf8wgcw628whv"]
+[gd_scene load_steps=7 format=3 uid="uid://cf8wgcw628whv"]
 
 [ext_resource type="PackedScene" uid="uid://ns1b2q44tkds" path="res://Map/map_10.tscn" id="1_d7cew"]
 [ext_resource type="PackedScene" uid="uid://bjxrr73ja265u" path="res://Map/map_9.tscn" id="2_3bfub"]
 [ext_resource type="PackedScene" uid="uid://mi6vhp2gh7hh" path="res://Map/map_8.tscn" id="3_pb7b6"]
 [ext_resource type="PackedScene" uid="uid://23tptn5rd2dy" path="res://Map/stolb_1.tscn" id="4_dw4pi"]
 [ext_resource type="PackedScene" uid="uid://8hcbbvhh1ugj" path="res://Map/rock.tscn" id="5_e1ymj"]
+[ext_resource type="PackedScene" uid="uid://du1swxr074uqi" path="res://Map/money.tscn" id="6_snkee"]
 
 [node name="Map_L" type="Node3D"]
 
@@ -54,3 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -5)
 
 [node name="rock4" parent="." instance=ExtResource("5_e1ymj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -5)
+
+[node name="money" parent="." instance=ExtResource("6_snkee")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 3, 0)

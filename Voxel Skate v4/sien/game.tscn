@@ -145,6 +145,20 @@ text = "Max Score:0"
 stream = SubResource("AudioStreamRandomizer_oo8ub")
 autoplay = true
 
+[node name="now_coin" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -272.0
+offset_top = 64.0
+offset_right = -215.0
+offset_bottom = 87.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Coin: 0 "
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]

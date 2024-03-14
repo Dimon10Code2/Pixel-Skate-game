@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://cay6aecdks047"]
+
+[ext_resource type="PackedScene" uid="uid://ximf7ha5cmg2" path="res://Map/map_11.tscn" id="1_j71pt"]
+[ext_resource type="PackedScene" uid="uid://dmivxw8alwn6o" path="res://Map/map_12.tscn" id="2_hf4qr"]
+[ext_resource type="PackedScene" uid="uid://b0g73oib4huad" path="res://Map/map_13.tscn" id="3_vwaip"]
+[ext_resource type="PackedScene" uid="uid://coosp7ey4ybh2" path="res://Map/stolb_2.tscn" id="4_g6l30"]
+[ext_resource type="PackedScene" uid="uid://cgtla7xy3s34" path="res://Map/nadgrobie.tscn" id="6_n1f6t"]
+[ext_resource type="PackedScene" uid="uid://du1swxr074uqi" path="res://Map/money.tscn" id="7_rdgcs"]
+
+[node name="map_x" type="Node3D"]
+
+[node name="map_11" parent="." instance=ExtResource("1_j71pt")]
+
+[node name="map_12" parent="." instance=ExtResource("1_j71pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 0)
+
+[node name="map_13" parent="." instance=ExtResource("2_hf4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="map_14" parent="." instance=ExtResource("2_hf4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="map_15" parent="." instance=ExtResource("2_hf4qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="map_16" parent="." instance=ExtResource("3_vwaip")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 4, 0)
+
+[node name="map_17" parent="." instance=ExtResource("3_vwaip")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 2, 0)
+
+[node name="map_18" parent="." instance=ExtResource("3_vwaip")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0, 0)
+
+[node name="stolb2" parent="." instance=ExtResource("4_g6l30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, 5)
+
+[node name="stolb3" parent="." instance=ExtResource("4_g6l30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 0)
+
+[node name="stolb4" parent="." instance=ExtResource("4_g6l30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, 0)
+
+[node name="nadgrobie" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5)
+
+[node name="nadgrobie2" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -5)
+
+[node name="nadgrobie3" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -5)
+
+[node name="nadgrobie4" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, -5)
+
+[node name="nadgrobie5" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, -5)
+
+[node name="nadgrobie6" parent="." instance=ExtResource("6_n1f6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 2, -5)
+
+[node name="money" parent="." instance=ExtResource("7_rdgcs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, 0)
+
+[node name="money2" parent="." instance=ExtResource("7_rdgcs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, 4)

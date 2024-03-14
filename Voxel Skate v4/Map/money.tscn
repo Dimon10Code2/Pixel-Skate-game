@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://du1swxr074uqi"]
+
+[ext_resource type="ArrayMesh" uid="uid://dwvlonih6jc55" path="res://obj/money.obj" id="1_7ftt8"]
+[ext_resource type="Script" path="res://Map/money.gd" id="2_u0agu"]
+[ext_resource type="ArrayMesh" uid="uid://04fm4cbidjn4" path="res://obj/money1.obj" id="3_wcjeo"]
+[ext_resource type="ArrayMesh" uid="uid://co4x6fstbcflp" path="res://obj/money2.obj" id="4_rsolr"]
+[ext_resource type="ArrayMesh" uid="uid://dvkjt2duuwhyx" path="res://obj/money3.obj" id="5_smi0m"]
+
+[sub_resource type="Animation" id="Animation_n1jag"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_5xsk5"]
+resource_name = "up_anim"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_7ftt8"), ExtResource("3_wcjeo"), ExtResource("4_rsolr"), ExtResource("5_smi0m"), ExtResource("4_rsolr"), ExtResource("3_wcjeo"), ExtResource("1_7ftt8"), ExtResource("3_wcjeo"), ExtResource("4_rsolr"), ExtResource("5_smi0m"), ExtResource("4_rsolr")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xgliw"]
+_data = {
+"RESET": SubResource("Animation_n1jag"),
+"up_anim": SubResource("Animation_5xsk5")
+}
+
+[node name="money" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("2_u0agu")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
+target_position = Vector3(-1, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../MeshInstance3D")
+libraries = {
+"": SubResource("AnimationLibrary_xgliw")
+}
+speed_scale = 0.75
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7ftt8")

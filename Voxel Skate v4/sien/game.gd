@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var money = $now_coin
 @onready var max_record = $Max_Record
 @onready var max_score_game = 0
 @onready var run_sound = $AudioStreamPlayer
@@ -36,6 +37,7 @@ func _ready():
 	randomize()
 	spawn_inst(62, 0, 0)
 	speed.text = str('speed:', speed_map)
+	money.text = str('Coin:', Money.coin)
 	Player = Global.PlayerScene.instantiate()
 	Player.position = PlayerSpawn.position
 	add_child(Player)
@@ -44,6 +46,7 @@ func _ready():
 	
 	
 func _physics_process(delta):
+	money.text = str('Coin:', Money.coin)
 	for map in map_sp.get_children():
 		map.position.x -= speed_map*delta
 		if map.position.x < -62:

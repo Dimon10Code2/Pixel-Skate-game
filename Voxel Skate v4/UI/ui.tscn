@@ -45,6 +45,12 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Play"
 
+[node name="Buy" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy"
+
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
@@ -108,6 +114,12 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Alien"
 
+[node name="Ghost" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Ghost"
+
 [node name="Back" type="Button" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -144,6 +156,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Mars"
+
+[node name="cemetery" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Cemetery"
 
 [node name="Back3" type="Button" parent="MarginContainer3/VBoxContainer"]
 layout_mode = 2
@@ -182,21 +200,147 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Mars"
 
+[node name="cemetery2" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Cemetery"
+
 [node name="Back2" type="Button" parent="MarginContainer4/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Back"
 
+[node name="coin" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -288.0
+offset_top = 32.0
+offset_right = -235.0
+offset_bottom = 55.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Coin: 0"
+
+[node name="MarginContainer5" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -348.0
+offset_right = -182.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer5"]
+layout_mode = 2
+
+[node name="buy_al" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Alien for 20 coin"
+
+[node name="buy_mars" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Mars for 10 coin"
+
+[node name="buy_ghost" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Ghost for 30 coin"
+
+[node name="buy_cemetery" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Cemetery for 20 coin"
+
+[node name="Bakc5" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="MarginContainer6" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -244.0
+offset_right = -29.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer6"]
+layout_mode = 2
+
+[node name="City3" type="Button" parent="MarginContainer6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "City"
+
+[node name="Mars3" type="Button" parent="MarginContainer6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Mars"
+
+[node name="cemetery3" type="Button" parent="MarginContainer6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Cemetery"
+
+[node name="Back6" type="Button" parent="MarginContainer6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/Man" to="." method="_on_man_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/Alien" to="." method="_on_alien_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Ghost" to="." method="_on_ghost_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer3/VBoxContainer/City" to="." method="_on_city_pressed"]
 [connection signal="pressed" from="MarginContainer3/VBoxContainer/Mars" to="." method="_on_mars_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/cemetery" to="." method="_on_cemetery_pressed"]
 [connection signal="pressed" from="MarginContainer3/VBoxContainer/Back3" to="." method="_on_back_3_pressed"]
 [connection signal="pressed" from="MarginContainer4/VBoxContainer/City2" to="." method="_on_city_2_pressed"]
 [connection signal="pressed" from="MarginContainer4/VBoxContainer/Mars2" to="." method="_on_mars_2_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/cemetery2" to="." method="_on_cemetery_2_pressed"]
 [connection signal="pressed" from="MarginContainer4/VBoxContainer/Back2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_al" to="." method="_on_buy_al_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_mars" to="." method="_on_buy_mars_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_ghost" to="." method="_on_buy_ghost_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_cemetery" to="." method="_on_buy_cemetery_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/Bakc5" to="." method="_on_bakc_5_pressed"]
+[connection signal="pressed" from="MarginContainer6/VBoxContainer/City3" to="." method="_on_city_3_pressed"]
+[connection signal="pressed" from="MarginContainer6/VBoxContainer/Mars3" to="." method="_on_mars_3_pressed"]
+[connection signal="pressed" from="MarginContainer6/VBoxContainer/cemetery3" to="." method="_on_cemetery_3_pressed"]
+[connection signal="pressed" from="MarginContainer6/VBoxContainer/Back6" to="." method="_on_back_6_pressed"]
