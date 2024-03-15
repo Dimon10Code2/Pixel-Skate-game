@@ -1,5 +1,10 @@
 extends Control
 
+@onready var purchased_4 = $MarginContainer5/VBoxContainer/Label5
+@onready var purchased_3 = $MarginContainer5/VBoxContainer/Label4
+@onready var purchased_2 = $MarginContainer5/VBoxContainer/Label3
+@onready var purchased_1 = $MarginContainer5/VBoxContainer/Label2
+@onready var purchased = $MarginContainer5/VBoxContainer/Label
 @onready var ghost_menu = $MarginContainer6
 @onready var buy_menu = $MarginContainer5
 @onready var coin_lb = $coin
@@ -11,14 +16,26 @@ var al_buy = false
 var mars_buy = false
 var ghost_buy = false
 var Cemetery_buy = false
+var buy_revive = false
 
 func _ready():
 	al_buy = SaveSystem.get_var("abcdefg123456g", al_buy)
 	mars_buy = SaveSystem.get_var("abcdefg123456r", mars_buy)
 	ghost_buy = SaveSystem.get_var("abcdefg123456d", ghost_buy)
 	Cemetery_buy = SaveSystem.get_var("abcdefg123456s", Cemetery_buy)
+	buy_revive = SaveSystem.get_var("abcdefg123456h", buy_revive)
 	Money.load_coin()
 	coin_lb.text = str('Coin:', Money.coin)
+	if al_buy == true:
+		purchased.show()
+	if mars_buy == true:
+		purchased_1.show()
+	if ghost_buy == true:
+		purchased_2.show()
+	if Cemetery_buy == true:
+		purchased_3.show()
+	if buy_revive == true:
+		purchased_4.show()
 	get_tree().paused = false
 
 
@@ -93,21 +110,23 @@ func _on_buy_pressed():
 
 
 func _on_buy_al_pressed():
-	if al_buy == false and Money.coin >= 20:
-		Money.coin -= 20
+	if al_buy == false and Money.coin >= 35:
+		Money.coin -= 35
 		Money.save_coin()
 		coin_lb.text = str('Coin:', Money.coin)
 		al_buy = true
 		SaveSystem.set_var("abcdefg123456g", al_buy)
+		purchased.show()
 
 
 func _on_buy_mars_pressed():
-	if mars_buy == false and Money.coin >= 10:
-		Money.coin -= 10
+	if mars_buy == false and Money.coin >= 15:
+		Money.coin -= 15
 		Money.save_coin()
 		coin_lb.text = str('Coin:', Money.coin)
 		mars_buy = true
 		SaveSystem.set_var("abcdefg123456r", mars_buy)
+		purchased_1.show()
 
 
 func _on_bakc_5_pressed():
@@ -116,21 +135,23 @@ func _on_bakc_5_pressed():
 
 
 func _on_buy_ghost_pressed():
-	if ghost_buy == false and Money.coin >= 30:
-		Money.coin -= 30
+	if ghost_buy == false and Money.coin >= 50:
+		Money.coin -= 50
 		Money.save_coin()
 		coin_lb.text = str('Coin:', Money.coin)
 		ghost_buy = true
 		SaveSystem.set_var("abcdefg123456d", ghost_buy)
+		purchased_2.show()
 
 
 func _on_buy_cemetery_pressed():
-	if Cemetery_buy == false and Money.coin >= 20:
-		Money.coin -= 20
+	if Cemetery_buy == false and Money.coin >= 40:
+		Money.coin -= 40
 		Money.save_coin()
 		coin_lb.text = str('Coin:', Money.coin)
 		Cemetery_buy = true
 		SaveSystem.set_var("abcdefg123456s", Cemetery_buy)
+		purchased_3.show()
 
 func _on_ghost_pressed():
 	if ghost_buy == true:
@@ -171,3 +192,13 @@ func _on_cemetery_3_pressed():
 func _on_back_6_pressed():
 	ghost_menu.hide()
 	Chapert_menu.show()
+
+
+func _on_buy_revive_pressed():
+	if buy_revive == false and Money.coin >= 50:
+		Money.coin -= 50
+		Money.save_coin()
+		coin_lb.text = str('Coin:', Money.coin)
+		buy_revive = true
+		SaveSystem.set_var("abcdefg123456h", buy_revive)
+		purchased_4.show()

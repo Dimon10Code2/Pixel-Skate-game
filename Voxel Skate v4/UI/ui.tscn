@@ -235,13 +235,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -348.0
-offset_right = -182.0
-offset_bottom = -177.0
+offset_left = -160.0
+offset_top = -404.0
+offset_right = 42.0
+offset_bottom = -63.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4, 4)
+scale = Vector2(2.2, 2.2)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer5"]
 layout_mode = 2
@@ -250,25 +250,71 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-text = "Buy Alien for 20 coin"
+text = "Buy Alien for 35 coin"
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Alien purchased"
+horizontal_alignment = 1
 
 [node name="buy_mars" type="Button" parent="MarginContainer5/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-text = "Buy Mars for 10 coin"
+text = "Buy Mars for 15 coin"
+
+[node name="Label2" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Mars purchased"
+horizontal_alignment = 1
 
 [node name="buy_ghost" type="Button" parent="MarginContainer5/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-text = "Buy Ghost for 30 coin"
+text = "Buy Ghost for 50 coin"
+
+[node name="Label3" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Ghost purchased"
+horizontal_alignment = 1
 
 [node name="buy_cemetery" type="Button" parent="MarginContainer5/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-text = "Buy Cemetery for 20 coin"
+text = "Buy Cemetery for 40 coin"
+
+[node name="Label4" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Cementery purchased"
+horizontal_alignment = 1
+
+[node name="Buy_Revive" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Revive for 50 coin"
+
+[node name="Label5" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Revive purchased"
+horizontal_alignment = 1
 
 [node name="Bakc5" type="Button" parent="MarginContainer5/VBoxContainer"]
 layout_mode = 2
@@ -339,6 +385,7 @@ text = "Back"
 [connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_mars" to="." method="_on_buy_mars_pressed"]
 [connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_ghost" to="." method="_on_buy_ghost_pressed"]
 [connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_cemetery" to="." method="_on_buy_cemetery_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/Buy_Revive" to="." method="_on_buy_revive_pressed"]
 [connection signal="pressed" from="MarginContainer5/VBoxContainer/Bakc5" to="." method="_on_bakc_5_pressed"]
 [connection signal="pressed" from="MarginContainer6/VBoxContainer/City3" to="." method="_on_city_3_pressed"]
 [connection signal="pressed" from="MarginContainer6/VBoxContainer/Mars3" to="." method="_on_mars_3_pressed"]

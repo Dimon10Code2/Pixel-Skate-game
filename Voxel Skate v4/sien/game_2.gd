@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var money = $now_coin
 @onready var max_record = $Max_Record
-@onready var max_score_game = 0
+@onready var max_score_game_1 = 0
 @onready var run_sound = $AudioStreamPlayer
 @onready var stop = $Stop
 @onready var mave = $Move
@@ -13,8 +13,10 @@ extends Node3D
 @onready var sprite = $Sprite3D
 @onready var map_sp = $map_spawn
 @onready var PlayerSpawn: Marker3D = $Pl_spawn
-var score_game = 0 
+var set_revive_1 = false
+var score_game_1 = 0 
 var speed_map = 18
+var buy_revive = false
 var segments = [
 	preload("res://Map/map_k.tscn"),
 	preload("res://Map/map_l.tscn"),
@@ -28,6 +30,12 @@ var vel = Vector3()
 var Player: CharacterBody3D = null
 
 func _ready():
+	set_revive_1 = SaveSystem.get_var("5bcdefg1234567", set_revive_1)
+	buy_revive = SaveSystem.get_var("abcdefg123456h", buy_revive)
+	if set_revive_1 == true:
+		score_game_1 = SaveSystem.get_var("2bcdefg1234567", score_game_1)
+		score.text = str('Score:', score_game_1)
+		set_revive_1 = false
 	update_rec()
 	get_tree().paused = false
 	randomize()
@@ -47,13 +55,14 @@ func _physics_process(delta):
 		if map.position.x < -62:
 			spawn_inst(map.position.x+124, 0, 0)
 			map.queue_free()
-			score_game += 1
-			score.text = str('Score:', score_game)
-			if score_game>max_score_game:
-				max_score_game = score_game
-				SaveSystem.set_var( "abcdefg1234567", max_score_game)
+			score_game_1 += 1
+			score.text = str('Score:', score_game_1)
+			SaveSystem.set_var("2bcdefg1234567", score_game_1)
+			if score_game_1>max_score_game_1:
+				max_score_game_1 = score_game_1
+				SaveSystem.set_var( "abcdefg1234568", max_score_game_1)
 			else:
-				max_score_game = SaveSystem.get_var("abcdefg1234567", max_score_game)
+				max_score_game_1 = SaveSystem.get_var("abcdefg1234568", max_score_game_1)
 			update_rec()
 	for fone in sprite.get_children():
 		fone.position.x -= speed_map*delta
@@ -82,8 +91,8 @@ func pause():
 	
 
 func update_rec():
-	max_score_game = SaveSystem.get_var("abcdefg1234567", max_score_game)
-	max_record.text = str('Max Score:', max_score_game)
+	max_score_game_1 = SaveSystem.get_var("abcdefg1234568", max_score_game_1)
+	max_record.text = str('Max Score:', max_score_game_1)
 
 func _on_resume_pressed():
 	resume()
@@ -105,3 +114,12 @@ func _on_stop_pressed():
 	speed_map = 18
 	speed.text = str('speed:', speed_map)
 	run_sound.play()
+
+
+func _on_revive_pressed():
+	if buy_revive == true and Money.coin >= 25:
+		set_revive_1 = true
+		SaveSystem.set_var("5bcdefg1234567", set_revive_1)
+		Money.coin -= 25
+		Money.save_coin()
+		Global.StartLevel()

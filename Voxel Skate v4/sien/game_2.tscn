@@ -73,6 +73,13 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 text = "Resume"
 
+[node name="Revive" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Revive for 25 coins"
+
 [node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
@@ -160,6 +167,7 @@ stream = SubResource("AudioStreamRandomizer_tjew3")
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Revive" to="." method="_on_revive_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
