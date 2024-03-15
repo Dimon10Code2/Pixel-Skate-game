@@ -228,6 +228,7 @@ theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
 text = "Coin: 0"
 
 [node name="MarginContainer5" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
