@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cmep7wcxbnm8a" path="res://Map/map_5.tscn" id="6_nqh1b"]
 [ext_resource type="PackedScene" uid="uid://p1wnlpxjufvg" path="res://Map/map_7.tscn" id="7_5fja2"]
 [ext_resource type="PackedScene" uid="uid://b2lqlnwl7ywo1" path="res://Map/stolb.tscn" id="8_y5hdt"]
-[ext_resource type="PackedScene" uid="uid://du1swxr074uqi" path="res://Map/money.tscn" id="9_djwqo"]
+[ext_resource type="PackedScene" uid="uid://dcv0g7mhs5hcl" path="res://Map/coin.tscn" id="9_bih2s"]
 
 [node name="Map_B" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
@@ -54,5 +54,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -31)
 [node name="Stolb5" parent="." instance=ExtResource("8_y5hdt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.43094e-07, 3, -17)
 
-[node name="money" parent="." instance=ExtResource("9_djwqo")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.80825e-07, 3, -11)
+[node name="coin" parent="." instance=ExtResource("9_bih2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80825e-07, 3, -11)

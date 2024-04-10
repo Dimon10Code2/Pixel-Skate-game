@@ -75,6 +75,7 @@ text = "Resume"
 
 [node name="Revive" type="Button" parent="MarginContainer/VBoxContainer"]
 process_mode = 3
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)

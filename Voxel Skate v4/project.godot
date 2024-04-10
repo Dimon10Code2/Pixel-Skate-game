@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Voxel_Skate Lite"
-config/version="1.1"
+config/name="Voxel Skate Lite"
+config/version="1.1.1"
 run/main_scene="res://UI/ui.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
@@ -21,7 +21,7 @@ boot_splash/minimum_display_time=2500
 
 SaveSystem="*res://addons/save_system/save_system.gd"
 Global="*res://Script/Global.gd"
-Money="*res://Map/money.tscn"
+Money="*res://Map/coin.tscn"
 
 [display]
 
@@ -48,6 +48,16 @@ player_run={
 player_stop={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+esc={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+pause={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

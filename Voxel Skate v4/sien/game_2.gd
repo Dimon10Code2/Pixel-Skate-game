@@ -36,6 +36,7 @@ func _ready():
 		score_game_1 = SaveSystem.get_var("2bcdefg1234567", score_game_1)
 		score.text = str('Score:', score_game_1)
 		set_revive_1 = false
+		SaveSystem.set_var("5bcdefg1234567", set_revive_1)
 	update_rec()
 	get_tree().paused = false
 	randomize()
