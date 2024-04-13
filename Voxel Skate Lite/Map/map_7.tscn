@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://p1wnlpxjufvg"]
+
+[ext_resource type="Material" path="res://obj/palette_001.material" id="1_rdq2e"]
+[ext_resource type="ArrayMesh" uid="uid://lfutth66mkh4" path="res://obj/map3 bl.obj" id="1_x48v4"]
+
+[node name="Map_7" type="MeshInstance3D"]
+material_override = ExtResource("1_rdq2e")
+mesh = ExtResource("1_x48v4")

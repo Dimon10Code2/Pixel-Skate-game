@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://coosp7ey4ybh2"]
+
+[ext_resource type="ArrayMesh" uid="uid://cmvore0e8p5i8" path="res://obj/stolb2.obj" id="1_o7ilw"]
+[ext_resource type="Script" path="res://Map/stolb_logic.gd" id="2_4iw1t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aw77o"]
+size = Vector3(1.99365, 10.5088, 2.02142)
+
+[node name="stolb2" type="MeshInstance3D"]
+mesh = ExtResource("1_o7ilw")
+script = ExtResource("2_4iw1t")
+
+[node name="StaticBody3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0407715, 5.24561, 0.00576782)
+shape = SubResource("BoxShape3D_aw77o")
+
+[connection signal="body_entered" from="StaticBody3D" to="." method="_on_static_body_3d_body_entered"]

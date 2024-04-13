@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgtla7xy3s34"]
+
+[ext_resource type="ArrayMesh" uid="uid://llwv4rrs2ba1" path="res://obj/nadgrobie.obj" id="1_xarij"]
+
+[node name="nadgrobie" type="MeshInstance3D"]
+mesh = ExtResource("1_xarij")

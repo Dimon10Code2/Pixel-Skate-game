@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj1g0drckoqd0"]
+
+[ext_resource type="PackedScene" uid="uid://hihpilv5l22a" path="res://Map/map_4.tscn" id="1_4egjg"]
+[ext_resource type="PackedScene" uid="uid://bhu7a5djjqa12" path="res://Map/map_2.tscn" id="2_sf7vy"]
+[ext_resource type="PackedScene" uid="uid://frsdy03hjqkr" path="res://Map/map_6.tscn" id="3_j5fu7"]
+[ext_resource type="PackedScene" uid="uid://b2lqlnwl7ywo1" path="res://Map/stolb.tscn" id="4_diawt"]
+[ext_resource type="PackedScene" uid="uid://dcv0g7mhs5hcl" path="res://Map/coin.tscn" id="5_5cecj"]
+
+[node name="Map_C" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Map_4" parent="." instance=ExtResource("1_4egjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="Map_2" parent="." instance=ExtResource("2_sf7vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="Map_3" parent="." instance=ExtResource("2_sf7vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Map_5" parent="." instance=ExtResource("2_sf7vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="Map_6" parent="." instance=ExtResource("2_sf7vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+
+[node name="Map_7" parent="." instance=ExtResource("2_sf7vy")]
+
+[node name="Map_8" parent="." instance=ExtResource("1_4egjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
+
+[node name="Map_9" parent="." instance=ExtResource("1_4egjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 7)
+
+[node name="Map_10" parent="." instance=ExtResource("3_j5fu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -7)
+
+[node name="Map_11" parent="." instance=ExtResource("3_j5fu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -29)
+
+[node name="Stolb2" parent="." instance=ExtResource("4_diawt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 13)
+
+[node name="Stolb" parent="." instance=ExtResource("4_diawt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62269e-07, 3, -6)
+
+[node name="Stolb4" parent="." instance=ExtResource("4_diawt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -19)
+
+[node name="coin" parent="." instance=ExtResource("5_5cecj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.43094e-07, 3, -17)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmtgwrtisch2c"]
+
+[ext_resource type="ArrayMesh" uid="uid://7oesxye00284" path="res://obj/ghost.obj" id="1_64mkb"]
+
+[node name="Chapter3" type="MeshInstance3D"]
+mesh = ExtResource("1_64mkb")

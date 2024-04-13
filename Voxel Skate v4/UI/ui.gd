@@ -24,8 +24,8 @@ func _ready():
 	ghost_buy = SaveSystem.get_var("abcdefg123456d", ghost_buy)
 	Cemetery_buy = SaveSystem.get_var("abcdefg123456s", Cemetery_buy)
 	buy_revive = SaveSystem.get_var("abcdefg123456h", buy_revive)
-	Money.load_coin()
-	coin_lb.text = str('Coin:', Money.coin)
+	Global.load_coin()
+	coin_lb.text = str('Coin:', Global.coin)
 	if al_buy == true:
 		purchased.show()
 	if mars_buy == true:
@@ -110,20 +110,20 @@ func _on_buy_pressed():
 
 
 func _on_buy_al_pressed():
-	if al_buy == false and Money.coin >= 35:
-		Money.coin -= 35
-		Money.save_coin()
-		coin_lb.text = str('Coin:', Money.coin)
+	if al_buy == false and Global.coin >= 35:
+		Global.coin -= 35
+		Global.save_coin()
+		coin_lb.text = str('Coin:', Global.coin)
 		al_buy = true
 		SaveSystem.set_var("abcdefg123456g", al_buy)
 		purchased.show()
 
 
 func _on_buy_mars_pressed():
-	if mars_buy == false and Money.coin >= 15:
-		Money.coin -= 15
-		Money.save_coin()
-		coin_lb.text = str('Coin:', Money.coin)
+	if mars_buy == false and Global.coin >= 15:
+		Global.coin -= 15
+		Global.save_coin()
+		coin_lb.text = str('Coin:', Global.coin)
 		mars_buy = true
 		SaveSystem.set_var("abcdefg123456r", mars_buy)
 		purchased_1.show()
@@ -135,20 +135,20 @@ func _on_bakc_5_pressed():
 
 
 func _on_buy_ghost_pressed():
-	if ghost_buy == false and Money.coin >= 50:
-		Money.coin -= 50
-		Money.save_coin()
-		coin_lb.text = str('Coin:', Money.coin)
+	if ghost_buy == false and Global.coin >= 50:
+		Global.coin -= 50
+		Global.save_coin()
+		coin_lb.text = str('Coin:', Global.coin)
 		ghost_buy = true
 		SaveSystem.set_var("abcdefg123456d", ghost_buy)
 		purchased_2.show()
 
 
 func _on_buy_cemetery_pressed():
-	if Cemetery_buy == false and Money.coin >= 40:
-		Money.coin -= 40
-		Money.save_coin()
-		coin_lb.text = str('Coin:', Money.coin)
+	if Cemetery_buy == false and Global.coin >= 40:
+		Global.coin -= 40
+		Global.save_coin()
+		coin_lb.text = str('Coin:', Global.coin)
 		Cemetery_buy = true
 		SaveSystem.set_var("abcdefg123456s", Cemetery_buy)
 		purchased_3.show()
@@ -195,10 +195,10 @@ func _on_back_6_pressed():
 
 
 func _on_buy_revive_pressed():
-	if buy_revive == false and Money.coin >= 50:
-		Money.coin -= 50
-		Money.save_coin()
-		coin_lb.text = str('Coin:', Money.coin)
+	if buy_revive == false and Global.coin >= 50:
+		Global.coin -= 50
+		Global.save_coin()
+		coin_lb.text = str('Coin:', Global.coin)
 		buy_revive = true
 		SaveSystem.set_var("abcdefg123456h", buy_revive)
 		purchased_4.show()

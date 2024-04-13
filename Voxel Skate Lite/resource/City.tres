@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Map_Preset" load_steps=11 format=3 uid="uid://b7fvj00fahea4"]
+
+[ext_resource type="Texture2D" uid="uid://d1cxrlja40i7n" path="res://fone/IMG_20240226_175955_014.jpg" id="1_qpslk"]
+[ext_resource type="Script" path="res://Script/Map_Logic.gd" id="2_k3oqn"]
+[ext_resource type="PackedScene" uid="uid://bpqwdds286id0" path="res://Map/map_a.tscn" id="3_qe7n6"]
+[ext_resource type="PackedScene" uid="uid://cnobgugvivnha" path="res://Map/map_b.tscn" id="4_xt00a"]
+[ext_resource type="PackedScene" uid="uid://dj1g0drckoqd0" path="res://Map/map_c.tscn" id="5_bs7ma"]
+[ext_resource type="PackedScene" uid="uid://c6asjxgkog8nu" path="res://Map/map_d.tscn" id="6_btubi"]
+[ext_resource type="PackedScene" uid="uid://cqrg2ts3x1ibt" path="res://Map/map_e.tscn" id="7_nhg8f"]
+[ext_resource type="AudioStream" uid="uid://kdg0n1d8o1d" path="res://music/Hard.mp3" id="9_8o83p"]
+[ext_resource type="AudioStream" uid="uid://dl2ivfps22r46" path="res://music/Genki_es_ka.2.mp3" id="9_rahp6"]
+[ext_resource type="PackedScene" uid="uid://fs74gwrmf8dc" path="res://Map/map_h.tscn" id="10_7blyg"]
+
+[resource]
+script = ExtResource("2_k3oqn")
+id = "01"
+display_name = "City"
+segments = Array[PackedScene]([ExtResource("3_qe7n6"), ExtResource("4_xt00a"), ExtResource("5_bs7ma"), ExtResource("6_btubi"), ExtResource("7_nhg8f")])
+start = ExtResource("10_7blyg")
+sounds = Array[AudioStreamMP3]([ExtResource("9_rahp6"), ExtResource("9_8o83p")])
+background = ExtResource("1_qpslk")

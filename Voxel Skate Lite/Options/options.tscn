@@ -1,0 +1,216 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr08weo22h1bt"]
+
+[ext_resource type="Texture2D" uid="uid://i2lhkpabcys4" path="res://fone/kandinsky-download-1709226065045.png" id="1_uiw6j"]
+[ext_resource type="Script" path="res://Options/options.gd" id="1_wvdca"]
+[ext_resource type="AudioStream" uid="uid://dl2ivfps22r46" path="res://music/Genki_es_ka.2.mp3" id="3_ppod8"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvdca")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("1_uiw6j")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -220.0
+offset_right = 13.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Creators" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Creators"
+
+[node name="resolution" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Loading"
+
+[node name="Volume options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Volume options"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ppod8")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_right = 31.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Options"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -96.0
+offset_right = -10.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Creators1" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Di2 - main creators"
+
+[node name="Creators2" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Stalkerok - creators"
+
+[node name="Back_2" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -220.0
+offset_right = 13.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Volume on" type="Button" parent="MarginContainer3/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Volume on"
+
+[node name="Volume off" type="Button" parent="MarginContainer3/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Volume off"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer3/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Back_3" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -220.0
+offset_right = 29.0001
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer4"]
+layout_mode = 2
+
+[node name="resolution normal" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Start load on"
+
+[node name="resolution low" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Start load off"
+
+[node name="Back_4" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Creators" to="." method="_on_creators_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resolution" to="." method="_on_resolution_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume options" to="." method="_on_volume_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Back_2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Volume on" to="." method="_on_volume_on_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Volume off" to="." method="_on_volume_off_pressed"]
+[connection signal="value_changed" from="MarginContainer3/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Back_3" to="." method="_on_back_3_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/resolution normal" to="." method="_on_resolusion_normal_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/resolution low" to="." method="_on_resolusion_low_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/Back_4" to="." method="_on_back_4_pressed"]

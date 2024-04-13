@@ -1,0 +1,299 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo7yrajcric62"]
+
+[ext_resource type="Texture2D" uid="uid://i2lhkpabcys4" path="res://fone/kandinsky-download-1709226065045.png" id="1_nuujm"]
+[ext_resource type="Script" path="res://UI/ui.gd" id="1_vvtlp"]
+[ext_resource type="AudioStream" uid="uid://dl2ivfps22r46" path="res://music/Genki_es_ka.2.mp3" id="3_inedl"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vvtlp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("1_nuujm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -220.0
+offset_right = -18.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Play"
+
+[node name="Buy" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Options"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_inedl")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -168.0
+offset_right = -77.9999
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Voxel Skate"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.9999
+offset_top = -220.0
+offset_right = 8.00006
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Man" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Man"
+
+[node name="Alien" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Alien"
+
+[node name="Ghost" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Ghost"
+
+[node name="Back" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.9999
+offset_top = -220.0
+offset_right = 31.0001
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="City" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "City"
+
+[node name="Mars" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Mars"
+
+[node name="cemetery" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Cemetery"
+
+[node name="Back3" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[node name="coin" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -288.0
+offset_top = 32.0
+offset_right = -235.0
+offset_bottom = 55.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Coin: 0"
+
+[node name="MarginContainer5" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -332.0
+offset_right = 74.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8, 1.8)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer5"]
+layout_mode = 2
+
+[node name="buy_al" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Alien for 35 coin"
+
+[node name="Label" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Alien purchased"
+horizontal_alignment = 1
+
+[node name="buy_mars" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Mars for 15 coin"
+
+[node name="Label2" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Mars purchased"
+horizontal_alignment = 1
+
+[node name="buy_ghost" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Ghost for 50 coin"
+
+[node name="Label3" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Ghost purchased"
+horizontal_alignment = 1
+
+[node name="buy_cemetery" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Cemetery for 40 coin"
+
+[node name="Label4" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Cementery purchased"
+horizontal_alignment = 1
+
+[node name="Buy_Revive" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Buy Revive for 50 coin"
+
+[node name="Label5" type="Label" parent="MarginContainer5/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Revive purchased"
+horizontal_alignment = 1
+
+[node name="Bakc5" type="Button" parent="MarginContainer5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buy" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Man" to="." method="_on_man_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Alien" to="." method="_on_alien_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Ghost" to="." method="_on_ghost_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/City" to="." method="_on_city_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Mars" to="." method="_on_mars_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/cemetery" to="." method="_on_cemetery_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Back3" to="." method="_on_back_3_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_al" to="." method="_on_buy_al_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_mars" to="." method="_on_buy_mars_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_ghost" to="." method="_on_buy_ghost_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/buy_cemetery" to="." method="_on_buy_cemetery_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/Buy_Revive" to="." method="_on_buy_revive_pressed"]
+[connection signal="pressed" from="MarginContainer5/VBoxContainer/Bakc5" to="." method="_on_bakc_5_pressed"]

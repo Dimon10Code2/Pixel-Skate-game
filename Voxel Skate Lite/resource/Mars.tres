@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Map_Preset" load_steps=10 format=3 uid="uid://b8i3y0yaxkoa1"]
+
+[ext_resource type="Script" path="res://Script/Map_Logic.gd" id="1_b2bc7"]
+[ext_resource type="Texture2D" uid="uid://oo04yhpf716u" path="res://fone/kandinsky-download-1710175683921.png" id="1_h810l"]
+[ext_resource type="PackedScene" uid="uid://q17ew30n5i1o" path="res://Map/map_k.tscn" id="3_0ayp4"]
+[ext_resource type="PackedScene" uid="uid://b2w6g11kud048" path="res://Map/map_p.tscn" id="4_3cuxv"]
+[ext_resource type="AudioStream" uid="uid://0eekxr8e47w5" path="res://music/WEST.mp3" id="4_qx3qn"]
+[ext_resource type="PackedScene" uid="uid://beflgb0oqgc6l" path="res://Map/map_s.tscn" id="5_bg4i7"]
+[ext_resource type="PackedScene" uid="uid://dx4uoqyclrnhv" path="res://Map/map_n.tscn" id="5_xdr0t"]
+[ext_resource type="PackedScene" uid="uid://cf8wgcw628whv" path="res://Map/map_l.tscn" id="6_h15gq"]
+[ext_resource type="AudioStream" uid="uid://c15yhauinr4ye" path="res://music/bloody.mp3" id="8_xmoep"]
+
+[resource]
+script = ExtResource("1_b2bc7")
+id = "02"
+display_name = "Mars"
+segments = Array[PackedScene]([ExtResource("3_0ayp4"), ExtResource("4_3cuxv"), ExtResource("5_bg4i7"), ExtResource("6_h15gq")])
+start = ExtResource("5_xdr0t")
+sounds = Array[AudioStreamMP3]([ExtResource("4_qx3qn"), ExtResource("8_xmoep")])
+background = ExtResource("1_h810l")

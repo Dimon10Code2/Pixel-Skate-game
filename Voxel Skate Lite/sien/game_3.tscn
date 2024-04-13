@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmqgesk1nd3rw"]
+
+[ext_resource type="Script" path="res://sien/game_3.gd" id="1_1pnlt"]
+[ext_resource type="PackedScene" uid="uid://dx4uoqyclrnhv" path="res://Map/map_n.tscn" id="2_gyyv0"]
+[ext_resource type="Texture2D" uid="uid://oo04yhpf716u" path="res://fone/kandinsky-download-1710175683921.png" id="2_sedge"]
+[ext_resource type="PackedScene" uid="uid://c7puo7u8nsbga" path="res://Player/player.tscn" id="3_mx75n"]
+[ext_resource type="AudioStream" uid="uid://bbcpewjwfceul" path="res://music/7276393fa07d27f.mp3" id="4_pebmd"]
+[ext_resource type="AudioStream" uid="uid://0eekxr8e47w5" path="res://music/WEST.mp3" id="6_l10cb"]
+
+[node name="game_3" type="Node3D"]
+script = ExtResource("1_1pnlt")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, 0, 28, -7)
+texture = ExtResource("2_sedge")
+
+[node name="map_spawn" type="Node3D" parent="."]
+
+[node name="Map_N" parent="map_spawn" instance=ExtResource("2_gyyv0")]
+
+[node name="Player" parent="." instance=ExtResource("3_mx75n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 3, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 29, 30)
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 17.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Score:0"
+
+[node name="Speed" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_right = -170.0
+offset_bottom = 23.0
+grow_horizontal = 0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Speed:17"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="resume" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Resume"
+
+[node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Exit"
+
+[node name="pause" type="Button" parent="."]
+process_mode = 3
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Pause"
+
+[node name="Move" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -312.0
+offset_right = -397.0
+offset_bottom = -262.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Move"
+
+[node name="Stop" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -312.0
+offset_right = -596.0
+offset_bottom = -268.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+text = "Stop"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pebmd")
+volume_db = 6.0
+
+[node name="Max_Record" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 80.0
+offset_right = 46.0
+offset_bottom = 103.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "Max Score:0"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_l10cb")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="Stop" to="." method="_on_stop_pressed"]

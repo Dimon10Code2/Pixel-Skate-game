@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b00y8nrr4xr4i"]
+
+[ext_resource type="PackedScene" uid="uid://du1swxr074uqi" path="res://Map/money.tscn" id="1_xlmq4"]
+
+[node name="test scene" type="Node3D"]
+
+[node name="money" parent="." instance=ExtResource("1_xlmq4")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4.36294, 8.65653)

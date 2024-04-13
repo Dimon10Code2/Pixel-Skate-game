@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6asjxgkog8nu"]
+
+[ext_resource type="PackedScene" uid="uid://cai8geqfe3sg1" path="res://Map/map_1.tscn" id="1_sohef"]
+[ext_resource type="PackedScene" uid="uid://bhu7a5djjqa12" path="res://Map/map_2.tscn" id="2_b7lo1"]
+[ext_resource type="PackedScene" uid="uid://hihpilv5l22a" path="res://Map/map_4.tscn" id="3_15kfs"]
+[ext_resource type="PackedScene" uid="uid://c6i2wnq2j1wnw" path="res://Map/map_3.tscn" id="4_kxfly"]
+[ext_resource type="PackedScene" uid="uid://cmep7wcxbnm8a" path="res://Map/map_5.tscn" id="5_v0ils"]
+[ext_resource type="PackedScene" uid="uid://p1wnlpxjufvg" path="res://Map/map_7.tscn" id="6_k5vyb"]
+[ext_resource type="PackedScene" uid="uid://frsdy03hjqkr" path="res://Map/map_6.tscn" id="7_lxpkm"]
+[ext_resource type="PackedScene" uid="uid://b2lqlnwl7ywo1" path="res://Map/stolb.tscn" id="8_d38cd"]
+[ext_resource type="PackedScene" uid="uid://dcv0g7mhs5hcl" path="res://Map/coin.tscn" id="9_wox6h"]
+
+[node name="Map_D" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Map_1" parent="." instance=ExtResource("1_sohef")]
+
+[node name="Map_2" parent="." instance=ExtResource("1_sohef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36)
+
+[node name="Map_3" parent="." instance=ExtResource("1_sohef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="Map_4" parent="." instance=ExtResource("1_sohef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Map_5" parent="." instance=ExtResource("2_b7lo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="Map_6" parent="." instance=ExtResource("3_15kfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="Map_7" parent="." instance=ExtResource("3_15kfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7)
+
+[node name="Map_8" parent="." instance=ExtResource("4_kxfly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 7)
+
+[node name="Map_9" parent="." instance=ExtResource("3_15kfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 7)
+
+[node name="Map_10" parent="." instance=ExtResource("5_v0ils")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -35)
+
+[node name="Map_11" parent="." instance=ExtResource("6_k5vyb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -23)
+
+[node name="Map_12" parent="." instance=ExtResource("7_lxpkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, 14)
+
+[node name="Map_13" parent="." instance=ExtResource("7_lxpkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -6)
+
+[node name="Stolb" parent="." instance=ExtResource("8_d38cd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -29)
+
+[node name="Stolb3" parent="." instance=ExtResource("8_d38cd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 4)
+
+[node name="Stolb6" parent="." instance=ExtResource("8_d38cd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37115e-07, 3, -10)
+
+[node name="coin" parent="." instance=ExtResource("9_wox6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1196e-07, 3, 14)
