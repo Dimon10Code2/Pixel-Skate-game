@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmjt03sm3ij7m"
+path="res://.godot/imported/3d fon 1.1-21.obj-547c6e857871a515fe00bd5c9af1692e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/3d fon 1.1-21.obj-547c6e857871a515fe00bd5c9af1692e.mesh"]
+
+source_file="res://obj/3d fon 1.1-21.obj"
+dest_files=["res://.godot/imported/3d fon 1.1-21.obj-547c6e857871a515fe00bd5c9af1692e.mesh", "res://.godot/imported/3d fon 1.1-21.obj-547c6e857871a515fe00bd5c9af1692e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

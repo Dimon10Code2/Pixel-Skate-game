@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Map_Preset" load_steps=9 format=3 uid="uid://c1em5yww5ugc2"]
+
+[ext_resource type="Texture2D" uid="uid://fu67ffqjt0af" path="res://fone/kandinsky-download-1710435924779.png" id="1_35rvw"]
+[ext_resource type="Script" path="res://Script/Map_Logic.gd" id="1_ul1r3"]
+[ext_resource type="PackedScene" uid="uid://dd2ifhlkq0vqi" path="res://Map/map_m.tscn" id="3_am2m5"]
+[ext_resource type="PackedScene" uid="uid://csl0gnkafc304" path="res://Map/map_q.tscn" id="4_rydro"]
+[ext_resource type="PackedScene" uid="uid://cay6aecdks047" path="res://Map/map_x.tscn" id="5_5l5gb"]
+[ext_resource type="PackedScene" uid="uid://b50qykqjb52h0" path="res://Map/map_z.tscn" id="6_h8b2h"]
+[ext_resource type="AudioStream" uid="uid://dtp31g3osat8b" path="res://music/music (1).mp3" id="7_ugls6"]
+[ext_resource type="AudioStream" uid="uid://bn6v6yw3ifh00" path="res://music/music2.mp3" id="8_dkfds"]
+
+[resource]
+script = ExtResource("1_ul1r3")
+id = "03"
+display_name = "Cemetery"
+segments = Array[PackedScene]([ExtResource("3_am2m5"), ExtResource("4_rydro"), ExtResource("5_5l5gb"), ExtResource("6_h8b2h")])
+start = ExtResource("3_am2m5")
+sounds = Array[AudioStreamMP3]([ExtResource("7_ugls6"), ExtResource("8_dkfds")])
+background = ExtResource("1_35rvw")

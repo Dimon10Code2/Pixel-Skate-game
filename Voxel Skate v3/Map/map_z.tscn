@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://b50qykqjb52h0"]
+
+[ext_resource type="PackedScene" uid="uid://ximf7ha5cmg2" path="res://Map/map_11.tscn" id="1_un0q4"]
+[ext_resource type="PackedScene" uid="uid://dmivxw8alwn6o" path="res://Map/map_12.tscn" id="2_70aha"]
+[ext_resource type="PackedScene" uid="uid://b0g73oib4huad" path="res://Map/map_13.tscn" id="3_valcb"]
+[ext_resource type="PackedScene" uid="uid://cgtla7xy3s34" path="res://Map/nadgrobie.tscn" id="5_81qvx"]
+[ext_resource type="PackedScene" uid="uid://coosp7ey4ybh2" path="res://Map/stolb_2.tscn" id="6_7qdkh"]
+[ext_resource type="PackedScene" uid="uid://dcv0g7mhs5hcl" path="res://Map/coin.tscn" id="6_gmbf8"]
+[ext_resource type="ArrayMesh" uid="uid://df3oujtdpv7lr" path="res://obj/3d fon 3.1-0.obj" id="7_nv654"]
+[ext_resource type="ArrayMesh" uid="uid://cel5xdkuykics" path="res://obj/3d fon 3.1-1.obj" id="8_xio2b"]
+[ext_resource type="ArrayMesh" uid="uid://cruvq0ic8cf1g" path="res://obj/3d fon 3.1-2.obj" id="9_xk66n"]
+[ext_resource type="ArrayMesh" uid="uid://cp441v58wfffr" path="res://obj/3d fon 3.1-3.obj" id="10_dl1mn"]
+[ext_resource type="ArrayMesh" uid="uid://bow7y15iawre2" path="res://obj/3d fon 3.1-4.obj" id="11_qkhvn"]
+[ext_resource type="ArrayMesh" uid="uid://bw2hqmw886rtq" path="res://obj/3d fon 3.1-5.obj" id="12_y42gx"]
+
+[node name="map_z" type="Node3D"]
+
+[node name="map_11" parent="." instance=ExtResource("1_un0q4")]
+
+[node name="map_12" parent="." instance=ExtResource("1_un0q4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="map_13" parent="." instance=ExtResource("2_70aha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="map_14" parent="." instance=ExtResource("2_70aha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 0)
+
+[node name="map_15" parent="." instance=ExtResource("2_70aha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="map_16" parent="." instance=ExtResource("3_valcb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 4, 0)
+
+[node name="map_17" parent="." instance=ExtResource("3_valcb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 2, 0)
+
+[node name="map_18" parent="." instance=ExtResource("3_valcb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 0, 0)
+
+[node name="nadgrobie" parent="." instance=ExtResource("5_81qvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, -5)
+
+[node name="nadgrobie2" parent="." instance=ExtResource("5_81qvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -5)
+
+[node name="nadgrobie3" parent="." instance=ExtResource("5_81qvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, -5)
+
+[node name="nadgrobie4" parent="." instance=ExtResource("5_81qvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2, -5)
+
+[node name="nadgrobie5" parent="." instance=ExtResource("5_81qvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 2, -5)
+
+[node name="stolb2" parent="." instance=ExtResource("6_7qdkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, 0)
+
+[node name="stolb3" parent="." instance=ExtResource("6_7qdkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 2, 5)
+
+[node name="stolb4" parent="." instance=ExtResource("6_7qdkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2, 5)
+
+[node name="coin" parent="." instance=ExtResource("6_gmbf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 2, 0)
+coin_value = 2
+
+[node name="coin2" parent="." instance=ExtResource("6_gmbf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, 0)
+coin_value = 2
+
+[node name="3dFon3_1-0" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("7_nv654")
+
+[node name="3dFon3_1-1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("8_xio2b")
+
+[node name="3dFon3_1-2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("9_xk66n")
+
+[node name="3dFon3_1-3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("10_dl1mn")
+
+[node name="3dFon3_1-4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("11_qkhvn")
+
+[node name="3dFon3_1-5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, -13)
+mesh = ExtResource("12_y42gx")

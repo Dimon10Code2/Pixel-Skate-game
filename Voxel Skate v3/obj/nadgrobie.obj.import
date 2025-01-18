@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://llwv4rrs2ba1"
+path="res://.godot/imported/nadgrobie.obj-77c0df61f01ca69c1914ec8dfe56c416.mesh"
+
+[deps]
+
+files=["res://.godot/imported/nadgrobie.obj-77c0df61f01ca69c1914ec8dfe56c416.mesh"]
+
+source_file="res://obj/nadgrobie.obj"
+dest_files=["res://.godot/imported/nadgrobie.obj-77c0df61f01ca69c1914ec8dfe56c416.mesh", "res://.godot/imported/nadgrobie.obj-77c0df61f01ca69c1914ec8dfe56c416.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

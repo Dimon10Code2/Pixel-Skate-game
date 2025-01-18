@@ -1,0 +1,263 @@
+[gd_scene load_steps=24 format=3 uid="uid://dn64qcnxobekr"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_c3524"]
+[ext_resource type="Material" path="res://obj/palette_001.material" id="2_6nvo3"]
+[ext_resource type="ArrayMesh" uid="uid://dabgcurq7v6ve" path="res://obj/sk2.obj" id="3_f07bv"]
+[ext_resource type="ArrayMesh" uid="uid://bc5f4433eaksa" path="res://obj/pl 2 anim 1_1.obj" id="3_fxx5s"]
+[ext_resource type="PackedScene" uid="uid://fb2wyxi1jn51" path="res://Player/chapert_2.tscn" id="5_vau2u"]
+[ext_resource type="AudioStream" uid="uid://bnbp5s83v3jhq" path="res://music/370b925a30aca01.mp3" id="6_61t8x"]
+[ext_resource type="AudioStream" uid="uid://dj6i1btljbnuj" path="res://music/ba33200b081ff74.mp3" id="6_hg1s6"]
+[ext_resource type="AudioStream" uid="uid://dxpcc05ab8qag" path="res://music/fb5b527adcfa08b.mp3" id="8_jlywy"]
+[ext_resource type="ArrayMesh" uid="uid://dop4u4nhp67ba" path="res://obj/pl2 bl.obj" id="11_t5qyo"]
+[ext_resource type="ArrayMesh" uid="uid://botywp6qwwbwb" path="res://obj/pl 2 anim 1.obj" id="12_7857k"]
+[ext_resource type="ArrayMesh" uid="uid://cmvwljiwacue0" path="res://obj/pl 2 anim 2.obj" id="13_c8gdf"]
+[ext_resource type="ArrayMesh" uid="uid://d1srtrv54tt5j" path="res://obj/pl 2 an 1.obj" id="14_j541c"]
+[ext_resource type="ArrayMesh" uid="uid://c2ssruhpftalp" path="res://obj/pl 2 an 2.obj" id="15_c8atm"]
+[ext_resource type="ArrayMesh" uid="uid://csrcej3wpkhjc" path="res://obj/pl 2 an 3.obj" id="16_doykk"]
+[ext_resource type="ArrayMesh" uid="uid://bfdapiewoqoh7" path="res://obj/pl 2 a 1.obj" id="17_fkjrj"]
+[ext_resource type="ArrayMesh" uid="uid://ctqk8vdkcrnqm" path="res://obj/pl 2 a 2.obj" id="18_wfq3w"]
+[ext_resource type="ArrayMesh" uid="uid://u6dbfessfw6b" path="res://obj/pl 2 a 3.obj" id="19_8noiy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nu0yq"]
+size = Vector3(2.00238, 0.518494, 5.98236)
+
+[sub_resource type="Animation" id="Animation_sfg0p"]
+resource_name = "Jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_t5qyo"), ExtResource("3_fxx5s"), ExtResource("3_fxx5s"), ExtResource("12_7857k"), ExtResource("12_7857k"), ExtResource("13_c8gdf"), ExtResource("13_c8gdf"), ExtResource("11_t5qyo")]
+}
+
+[sub_resource type="Animation" id="Animation_8oghb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_t5qyo")]
+}
+
+[sub_resource type="Animation" id="Animation_408k1"]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_t5qyo"), ExtResource("14_j541c"), ExtResource("14_j541c"), ExtResource("15_c8atm"), ExtResource("15_c8atm"), ExtResource("16_doykk"), ExtResource("16_doykk"), ExtResource("15_c8atm"), ExtResource("14_j541c"), ExtResource("11_t5qyo")]
+}
+
+[sub_resource type="Animation" id="Animation_pk0yu"]
+resource_name = "stop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_t5qyo"), ExtResource("17_fkjrj"), ExtResource("17_fkjrj"), ExtResource("18_wfq3w"), ExtResource("18_wfq3w"), ExtResource("19_8noiy"), ExtResource("19_8noiy"), ExtResource("19_8noiy"), ExtResource("18_wfq3w"), ExtResource("17_fkjrj"), ExtResource("11_t5qyo")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dq0hs"]
+_data = {
+"Jump": SubResource("Animation_sfg0p"),
+"RESET": SubResource("Animation_8oghb"),
+"run": SubResource("Animation_408k1"),
+"stop": SubResource("Animation_pk0yu")
+}
+
+[node name="Player_2" type="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_c3524")
+
+[node name="chapert2" parent="." instance=ExtResource("5_vau2u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.17878, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -1, 0)
+material_override = ExtResource("2_6nvo3")
+mesh = ExtResource("3_f07bv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131226, 1.05032, -0.00692749)
+shape = SubResource("BoxShape3D_nu0yq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.122614, -0.992454, 2.66454e-15, 0.992454, 0.122614, 1, 5.35964e-09, -4.33816e-08, -11, 8, -4.80825e-07)
+
+[node name="Jump" type="Button" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -28.0
+offset_right = -206.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Jump"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_hg1s6")
+volume_db = -6.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -284.0
+offset_right = -168.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="You die" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "         YOU DIE"
+
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Restart"
+
+[node name="Revive" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Revive for 25 coins"
+
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Menu"
+
+[node name="Death" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40671e-07, 1.0963, 3.21817)
+target_position = Vector3(0, 0, 1)
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_61t8x")
+
+[node name="Left" type="Button" parent="."]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -184.0
+offset_right = 102.0
+offset_bottom = -146.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Left"
+
+[node name="Right" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 264.0
+offset_top = -184.0
+offset_right = 313.0
+offset_bottom = -135.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Right"
+
+[node name="zero" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = -384.0
+offset_right = 315.0
+offset_bottom = -309.0
+grow_vertical = 0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Zero poz"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jlywy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../chapert2")
+libraries = {
+"": SubResource("AnimationLibrary_dq0hs")
+}
+
+[node name="Resume" type="Button" parent="."]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -15.5
+offset_right = 35.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Resume"
+
+[connection signal="pressed" from="Jump" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Revive" to="." method="_on_revive_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="zero" to="." method="_on_zero_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]

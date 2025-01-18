@@ -1,0 +1,262 @@
+[gd_scene load_steps=24 format=3 uid="uid://c7puo7u8nsbga"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_oqf1e"]
+[ext_resource type="Material" path="res://obj/palette_001.material" id="1_wmrpf"]
+[ext_resource type="ArrayMesh" uid="uid://cukjly6ibmxh6" path="res://obj/skate1.obj" id="2_lawdu"]
+[ext_resource type="PackedScene" uid="uid://dlw2ini1nsm7h" path="res://Player/chapert.tscn" id="4_68bp1"]
+[ext_resource type="AudioStream" uid="uid://dj6i1btljbnuj" path="res://music/ba33200b081ff74.mp3" id="6_es5uo"]
+[ext_resource type="AudioStream" uid="uid://bnbp5s83v3jhq" path="res://music/370b925a30aca01.mp3" id="7_saw16"]
+[ext_resource type="AudioStream" uid="uid://dxpcc05ab8qag" path="res://music/fb5b527adcfa08b.mp3" id="8_emj70"]
+[ext_resource type="ArrayMesh" uid="uid://cs664ef5umvym" path="res://obj/pl1 bl.obj" id="10_sp4x4"]
+[ext_resource type="ArrayMesh" uid="uid://b4moaipmhtemx" path="res://obj/pl 1 anim 1.obj" id="11_uqfrx"]
+[ext_resource type="ArrayMesh" uid="uid://dq5ieioo31y45" path="res://obj/pl 1 anim 2.obj" id="12_fxh6p"]
+[ext_resource type="ArrayMesh" uid="uid://bakooouij5b1o" path="res://obj/pl 1 anim 3.obj" id="13_gnb28"]
+[ext_resource type="ArrayMesh" uid="uid://csxx7iysi4uef" path="res://obj/pl 1 an 3.obj" id="14_qv7gu"]
+[ext_resource type="ArrayMesh" uid="uid://dawkb0ayiq7yd" path="res://obj/pl 1 an 2.obj" id="15_8256t"]
+[ext_resource type="ArrayMesh" uid="uid://cwqlualbo8ahu" path="res://obj/pl 1 an 1.obj" id="16_ymek7"]
+[ext_resource type="ArrayMesh" uid="uid://xp7rc1r6snui" path="res://obj/pl 1 a 1.obj" id="17_fcwae"]
+[ext_resource type="ArrayMesh" uid="uid://d3tdgfxob1h3f" path="res://obj/pl 1 a 2.obj" id="18_wqefa"]
+[ext_resource type="ArrayMesh" uid="uid://cn80awc1fn76f" path="res://obj/pl 1 a 3.obj" id="19_k3e7j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hn62r"]
+size = Vector3(1.39675, 0.993561, 4.99988)
+
+[sub_resource type="Animation" id="Animation_4gky7"]
+resource_name = "Jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.7, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_sp4x4"), ExtResource("11_uqfrx"), ExtResource("12_fxh6p"), ExtResource("13_gnb28"), ExtResource("13_gnb28"), ExtResource("12_fxh6p"), ExtResource("10_sp4x4")]
+}
+
+[sub_resource type="Animation" id="Animation_wxojy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_sp4x4")]
+}
+
+[sub_resource type="Animation" id="Animation_unyt5"]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_sp4x4"), ExtResource("14_qv7gu"), ExtResource("15_8256t"), ExtResource("16_ymek7"), ExtResource("15_8256t"), ExtResource("14_qv7gu"), ExtResource("10_sp4x4")]
+}
+
+[sub_resource type="Animation" id="Animation_gkewn"]
+resource_name = "stop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_sp4x4"), ExtResource("17_fcwae"), ExtResource("18_wqefa"), ExtResource("19_k3e7j"), ExtResource("19_k3e7j"), ExtResource("18_wqefa"), ExtResource("18_wqefa"), ExtResource("17_fcwae"), ExtResource("10_sp4x4")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ygub"]
+_data = {
+"Jump": SubResource("Animation_4gky7"),
+"RESET": SubResource("Animation_wxojy"),
+"run": SubResource("Animation_unyt5"),
+"stop": SubResource("Animation_gkewn")
+}
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_oqf1e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_wmrpf")
+mesh = ExtResource("2_lawdu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0959911, 0.912314, -0.00982666)
+shape = SubResource("BoxShape3D_hn62r")
+
+[node name="Chapert" parent="." instance=ExtResource("4_68bp1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.20512, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.122614, -0.992454, 2.66454e-15, 0.992454, 0.122614, 1, 5.35964e-09, -4.33816e-08, -11, 8, -4.80825e-07)
+
+[node name="Jump" type="Button" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -28.0
+offset_right = -206.0
+offset_bottom = 22.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Jump"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_es5uo")
+volume_db = -6.0
+
+[node name="Death" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.55)
+target_position = Vector3(0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -284.0
+offset_right = -168.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="You die" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+text = "         YOU DIE"
+
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Restart"
+
+[node name="Revive" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Revive for 25 coins"
+
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Menu"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("7_saw16")
+
+[node name="Left" type="Button" parent="."]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -184.0
+offset_right = 102.0
+offset_bottom = -146.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Left"
+
+[node name="Right" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 264.0
+offset_top = -184.0
+offset_right = 313.0
+offset_bottom = -135.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Right"
+
+[node name="zero" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = -384.0
+offset_right = 315.0
+offset_bottom = -309.0
+grow_vertical = 0
+scale = Vector2(1.8, 1.8)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Zero poz"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_emj70")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Chapert")
+libraries = {
+"": SubResource("AnimationLibrary_1ygub")
+}
+
+[node name="Resume" type="Button" parent="."]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -15.5
+offset_right = 35.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Resume"
+
+[connection signal="pressed" from="Jump" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Revive" to="." method="_on_revive_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="zero" to="." method="_on_zero_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
